@@ -23,31 +23,35 @@ android {
             }
         }
 
-        Properties properties = new Properties()
-        properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        buildConfigField "String", "CLIENT_ID", properties.getProperty("CLIENT_ID")
-        buildConfigField "String", "CLIENT_SECRET", properties.getProperty("CLIENT_SECRET")
+//        Properties properties = new Properties()
+//        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//        buildConfigField("String", "CLIENT_ID", "\"" + properties.getProperty("CLIENT_ID") + "\"")
+//        buildConfigField("String", "CLIENT_SECRET", "\"" + properties.getProperty("CLIENT_SECRET") + "\"")
+
+
+        buildConfigField("String", "CLIENT_ID", "\"90e7228a70d65bfcbe8c\"")
+        buildConfigField("String", "CLIENT_SECRET", "\"b076ae46637240f0ac58949d186433db68e7e25f\"")
 
         //CMake
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-            }
-            ndk {
-                abiFilters 'armeabi-v7a'
-            }
-        }
+//        externalNativeBuild {
+//            cmake {
+//                cppFlags ""
+//            }
+//            ndk {
+//                abiFilters 'armeabi-v7a'
+//            }
+//        }
 
-        ndk {
-            abiFilters 'armeabi-v7a'
-        }
+//        ndk {
+//            abiFilters 'armeabi-v7a'
+//        }
     }
 
-    externalNativeBuild {
-        cmake {
-            path 'CMakeLists.txt'
-        }
-    }
+//    externalNativeBuild {
+//        cmake {
+//            path 'CMakeLists.txt'
+//        }
+//    }
 
 
     /*sourceSets {
@@ -58,6 +62,10 @@ android {
     }*/
 
     buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -72,8 +80,8 @@ android {
     lintOptions {
         abortOnError false
     }
-    dataBinding{
-        enabled=true
+    dataBinding {
+        enabled = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -151,7 +159,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:${retrofit_version}"
     implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofit_version}"
     implementation "com.squareup.retrofit2:converter-scalars:${retrofit_version}"
-    implementation ("com.squareup.retrofit2:converter-simplexml:${rx_version}"){
+    implementation("com.squareup.retrofit2:converter-simplexml:${rx_version}") {
         exclude group: 'xpp3', module: 'xpp3'
         exclude group: 'stax', module: 'stax-api'
         exclude group: 'stax', module: 'stax'

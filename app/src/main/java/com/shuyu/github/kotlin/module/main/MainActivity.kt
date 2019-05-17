@@ -32,7 +32,11 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector, Toolbar.On
 
     companion object {
         init {
-            System.loadLibrary("native-gsy")
+//            try {
+//                System.loadLibrary("native-gsy")
+//            } catch (e: UnsatisfiedLinkError) {
+//                e.printStackTrace()
+//            }
         }
     }
 
@@ -81,7 +85,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector, Toolbar.On
         MainDrawerController(this, home_tool_bar, loginRepository, issueRepository, repositoryRepository, globalModel)
 
 
-        Debuger.printfWarning(stringFromJNI())
+//        Debuger.printfWarning(stringFromJNI())
 
     }
 

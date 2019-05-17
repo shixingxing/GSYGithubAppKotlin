@@ -142,7 +142,7 @@
                     app:pressedBackgroundColor="@color/colorPrimaryDark"
                     app:pressedTextColor="@android:color/white"
                     app:radius="5dp"
-                    app:round="false"
+                    app:gsyRound="false"
                     app:unableBackgroundColor="@color/colorPrimaryDark"
                     app:unableTextColor="@android:color/white" />
 

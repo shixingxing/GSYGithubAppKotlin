@@ -107,7 +107,7 @@ class StateButton @JvmOverloads constructor(context: Context, attrs: AttributeSe
 
         //set radius
         mRadius = a.getDimensionPixelSize(R.styleable.StateButton_radius, 0).toFloat()
-        mRound = a.getBoolean(R.styleable.StateButton_round, false)
+        mRound = a.getBoolean(R.styleable.StateButton_gsyRound, false)
         mNormalBackground!!.cornerRadius = mRadius
         mPressedBackground!!.cornerRadius = mRadius
         mUnableBackground!!.cornerRadius = mRadius

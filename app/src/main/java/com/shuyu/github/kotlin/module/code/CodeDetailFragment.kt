@@ -1,10 +1,10 @@
 package com.shuyu.github.kotlin.module.code
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProvider
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.View
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.shuyu.github.kotlin.R
@@ -72,8 +72,8 @@ class CodeDetailFragment : BaseFragment<FragmentCodeDetailBinding>(), ARouterInj
             }
             code_detail_web.spinKit.visibility = View.GONE
             code_detail_web.webView.requestIntercept = false
-            repos_readme_web. webView.settings.defaultTextEncodingName = "UTF-8"//设置默认为utf-8
-            repos_readme_web.webView.loadData(it, "text/html; charset=UTF-8", null);
+            code_detail_web.webView.settings.defaultTextEncodingName = "UTF-8"//设置默认为utf-8
+            code_detail_web.webView.loadData(it, "text/html; charset=UTF-8", null);
 
         })
         if (localCode == null) {

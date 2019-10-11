@@ -3,10 +3,10 @@ package com.shuyu.github.kotlin.module.image
 import android.Manifest
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.support.annotation.NonNull
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.NonNull
+import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.facade.Postcard
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
@@ -15,12 +15,12 @@ import com.github.chrisbanes.photoview.OnViewTapListener
 import com.orhanobut.dialogplus.DialogPlus
 import com.orhanobut.dialogplus.OnItemClickListener
 import com.shuyu.github.kotlin.R
+import com.shuyu.github.kotlin.common.gsyimageloader.GSYImageLoaderManager
+import com.shuyu.github.kotlin.common.gsyimageloader.GSYLoadOption
 import com.shuyu.github.kotlin.common.utils.FileUtils
 import com.shuyu.github.kotlin.di.ARouterInjectable
 import com.shuyu.github.kotlin.module.ARouterAddress
 import com.shuyu.github.kotlin.ui.adapter.TextListAdapter
-import com.shuyu.gsyimageloader.GSYImageLoaderManager
-import com.shuyu.gsyimageloader.GSYLoadOption
 import kotlinx.android.synthetic.main.activity_image_preview.*
 import permissions.dispatcher.NeedsPermission
 import permissions.dispatcher.OnPermissionDenied

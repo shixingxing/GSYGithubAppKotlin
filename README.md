@@ -30,15 +30,15 @@
 [![GitHub issues](https://img.shields.io/github/issues/CarGuo/GSYGithubAppKotlin.svg)](https://github.com/CarGuo/GSYGithubAppKotlin/issues)
 [![GitHub license](https://img.shields.io/github/license/CarGuo/GSYGithubAppKotlin.svg)](https://github.com/CarGuo/GSYGithubAppKotlin/blob/master/LICENSE)
 
-### 编译运行流程
+## 编译运行流程
 
 
->### 重点：你需要项目根目录下，配置 `local.properties` 文件，然后输入你申请的Github client_id 和 client_secret。
+> ### 重点：你需要项目根目录下，配置 `local.properties` 文件，然后输入你申请的Github client_id 和 client_secret。
 
     ndk.dir="xxxxxxxx"
     CLIENT_ID = "xxxxxx"
     CLIENT_SECRET = "xxxxxx"
-
+> ### 最后记得配置 [`CMake` 环境](https://blog.csdn.net/laibowon/article/details/79939962)。
 
    [      注册 Github APP 传送门](https://github.com/settings/applications/new)，当然，前提是你现有一个github账号(～￣▽￣)～ 。
 

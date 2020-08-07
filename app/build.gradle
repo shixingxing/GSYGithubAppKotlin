@@ -35,17 +35,18 @@ android {
 
         buildConfigField("String", "CLIENT_ID", "\"90e7228a70d65bfcbe8c\"")
         buildConfigField("String", "CLIENT_SECRET", "\"b076ae46637240f0ac58949d186433db68e7e25f\"")
+        buildConfigField "boolean", "NEED_CMAKE_TEST", "$needCMakeTest"
 
         if (needCMakeTest) {
             //CMake
-    //        externalNativeBuild {
-    //            cmake {
-    //                cppFlags ""
-    //            }
-    //            ndk {
-    //                abiFilters 'armeabi-v7a'
-    //            }
-    //        }
+            externalNativeBuild {
+                cmake {
+                    cppFlags ""
+                }
+                ndk {
+                    abiFilters 'armeabi-v7a'
+                }
+            }
         }
 
 //        ndk {

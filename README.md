@@ -1,11 +1,17 @@
-![](https://github.com/CarGuo/GSYGithubAppKotlin/blob/master/logo.png)
+![](./logo.png)
 
 ## 一款Android原生的开源Github客户端App，提供更丰富的功能，更好体验，旨在更好的日常管理和维护个人Github，提供更好更方便的驾车体验～～Σ(￣。￣ﾉ)ﾉ。项目使用`Retrofit2 + RxJava2 + Dagger2 + DataBinding + LiveData + Navigation` 等，MVVM 配合 Android JetPack，涉及各种常用控件、 `AIDL` 、 `CMake`,提供丰富的同款对比：
 
 * ### 同款Weex版 （ https://github.com/CarGuo/GSYGithubAppWeex ）
 * ### 同款ReactNative版 （ https://github.com/CarGuo/GSYGithubApp ）
 * ### 同款Flutter版 （ https://github.com/CarGuo/GSYGithubAppFlutter ）
+* ### [如果克隆太慢或者图片看不到，可尝试从码云地址下载](https://gitee.com/CarGuo/GSYGithubAppKotlin)
 
+| 公众号   | 掘金     |  知乎    |  CSDN   |   简书   
+|---------|---------|--------- |---------|---------|
+| GSYTech  |  [点我](https://juejin.im/user/582aca2ba22b9d006b59ae68/posts)    |   [点我](https://www.zhihu.com/people/carguo)       |   [点我](https://blog.csdn.net/ZuoYueLiang)  |   [点我](https://www.jianshu.com/u/6e613846e1ea)  
+
+![公众号](http://img.cdn.guoshuyu.cn/WeChat-Code)
 
 ```
 基于 Kotlin 开发的原生 App 。目前初版，持续完善中。
@@ -38,21 +44,24 @@
     ndk.dir="xxxxxxxx"
     CLIENT_ID = "xxxxxx"
     CLIENT_SECRET = "xxxxxx"
-> ### 最后记得配置 [`CMake` 环境](https://blog.csdn.net/laibowon/article/details/79939962)。
+> ### 如果需要测试 `CMake` ，要打开 Gradle 中的 `needCMakeTest` ，记得配置 [`CMake` 环境](https://blog.csdn.net/laibowon/article/details/79939962)。
+
 
    [      注册 Github APP 传送门](https://github.com/settings/applications/new)，当然，前提是你现有一个github账号(～￣▽￣)～ 。
-
+ 
+### 3、现在 Github API 需要使用安全登录（授权登录），那么在上述注册 Github App 的 Authorization callback URL 一栏必须填入 `gsygithubapp://authed`
 
 <div>
-<img src="https://raw.githubusercontent.com/CarGuo/GSYGithubAppKotlin/master/register0.jpg" width="426px"/>
-<img src="https://raw.githubusercontent.com/CarGuo/GSYGithubAppKotlin/master/register1.jpg" width="426px"/>
+<img src="http://img.cdn.guoshuyu.cn/register0.png" width="426px"/>
+<img src="http://img.cdn.guoshuyu.cn/register1.jpg" width="426px"/>
 </div>
+
 
 ## 项目结构图
 
-![](https://raw.githubusercontent.com/CarGuo/GSYGithubAppKotlin/master/framework.png)
+![](./framework.png)
 
-![](https://raw.githubusercontent.com/CarGuo/GSYGithubAppKotlin/master/folder2.png)
+![](./folder2.png)
 
 ## 下载
 
@@ -61,7 +70,7 @@
 
 #### Apk二维码
 
-![](https://raw.githubusercontent.com/CarGuo/GSYGithubAppKotlin/master/download.png)
+![](./download.png)
 
 
 ### 常见问题
@@ -73,11 +82,11 @@
 ### 示例图片
 
 
-<img src="https://github.com/CarGuo/GSYGithubAppKotlin/blob/master/1.jpg" width="426px"/>
+<img src="http://img.cdn.guoshuyu.cn/showapp1.jpg" width="426px"/>
 
-<img src="https://github.com/CarGuo/GSYGithubAppKotlin/blob/master/2.jpg" width="426px"/>
+<img src="http://img.cdn.guoshuyu.cn/showapp2.jpg" width="426px"/>
 
-<img src="https://github.com/CarGuo/GSYGithubAppKotlin/blob/master/3.jpg" width="426px"/>
+<img src="http://img.cdn.guoshuyu.cn/showapp3.jpg" width="426px"/>
 
 
 ### 第三方框架
@@ -108,7 +117,7 @@
 [版本更新说明](https://github.com/CarGuo/GSYGithubAppKotlin/blob/master/VERSION.md)
 
 
-<img src="https://github.com/CarGuo/GSYGithubAppKotlin/blob/master/thanks.jpg" width="426px"/>
+<img src="http://img.cdn.guoshuyu.cn/thanks.jpg" width="426px"/>
 
 
 ### 其他推荐

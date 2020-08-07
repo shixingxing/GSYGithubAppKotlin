@@ -8,14 +8,18 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'realm-android'
 
+
+///是否需要测试 CMake
+def needCMakeTest = false
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.shuyu.github.kotlin"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 6
-        versionName "1.0.5"
+        versionCode 10
+        versionName "1.1.0"
         javaCompileOptions {
             annotationProcessorOptions {
                 includeCompileClasspath = true
@@ -25,33 +29,37 @@ android {
 
 //        Properties properties = new Properties()
 //        properties.load(project.rootProject.file('local.properties').newDataInputStream())
-//        buildConfigField("String", "CLIENT_ID", "\"" + properties.getProperty("CLIENT_ID") + "\"")
-//        buildConfigField("String", "CLIENT_SECRET", "\"" + properties.getProperty("CLIENT_SECRET") + "\"")
-
+//        buildConfigField "String", "CLIENT_ID", properties.getProperty("CLIENT_ID")
+//        buildConfigField "String", "CLIENT_SECRET", properties.getProperty("CLIENT_SECRET")
+//        buildConfigField "boolean", "NEED_CMAKE_TEST", "$needCMakeTest"
 
         buildConfigField("String", "CLIENT_ID", "\"90e7228a70d65bfcbe8c\"")
         buildConfigField("String", "CLIENT_SECRET", "\"b076ae46637240f0ac58949d186433db68e7e25f\"")
 
-        //CMake
-//        externalNativeBuild {
-//            cmake {
-//                cppFlags ""
-//            }
-//            ndk {
-//                abiFilters 'armeabi-v7a'
-//            }
-//        }
+        if (needCMakeTest) {
+            //CMake
+    //        externalNativeBuild {
+    //            cmake {
+    //                cppFlags ""
+    //            }
+    //            ndk {
+    //                abiFilters 'armeabi-v7a'
+    //            }
+    //        }
+        }
 
 //        ndk {
 //            abiFilters 'armeabi-v7a'
 //        }
     }
 
-//    externalNativeBuild {
-//        cmake {
-//            path 'CMakeLists.txt'
-//        }
-//    }
+    if (needCMakeTest) {
+        externalNativeBuild {
+            cmake {
+                path 'CMakeLists.txt'
+            }
+        }
+    }
 
 
     /*sourceSets {
